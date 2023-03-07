@@ -1,0 +1,170 @@
+//main.sass
+body
+  background-color: #373737
+  width: 100%
+  min-height: 100vh
+  margin: 0
+  padding: 0
+  display: flex
+  justify-content: center
+  align-items: center
+.main-box
+  width: 350px
+  height: 500px
+  background-color: #373737 // +-10
+  border-radius: 25px
+  box-shadow: -10px -10px 20px 5px #454545, 10px 10px 20px 5px #2d2d2d
+  overflow: hidden
+  display: block
+  position: relative
+  margin: 50px 0
+.finger-effect
+  width: 350px
+  height: 500px
+  background-color: #373737
+  border-radius: 25px
+  position: absolute
+  top: -500px // to 0px
+  right: 0
+  .inner
+    position: relative
+    width: 350px
+    height: 500px
+    background-color: #454545
+    overflow: hidden
+    .light
+      position: absolute
+      top: 100px // to 450px
+      right: 50%
+      transform: translate(50%, -50%)
+      border-radius: 25px
+      box-shadow: 0 0 20px 5px aqua, 0 0 20px 10px rgba(0, 255, 255, 0.75), 0 0 40px 15px rgba(0, 255, 255, 0.5)
+      z-index: 1 // for test set 2
+      width: 75%
+      height: 5px
+      background-color: aqua
+      animation: checking-light 1.5s ease-in-out infinite
+      @keyframes checking-light
+        0%
+          top: 100px
+        50%
+          top: 400px
+        100%
+          top: 100px
+    img
+      position: absolute
+      top: 0
+      right: 0
+      z-index: 2
+      height: 100%
+      width: 100%
+    .checking-text
+      color: aqua
+      position: absolute
+      top: 85%
+      right: 50%
+      z-index: 3
+      transform: translate(50%, -50%)
+      font-family: "Comic Sans MS", Tahoma, sans-serif
+      font-size: x-large
+      &:after
+        content: ""
+        animation: checking-text 5s infinite linear
+        @keyframes checking-text
+          0%
+            content: "C"
+          2%
+            content: "Ch"
+          4%
+            content: "Che"
+          6%
+            content: "Chec"
+          8%
+            content: "Chech"
+          10%
+            content: "Chechi"
+          12%
+            content: "Chechin"
+          14%
+            content: "Cheching"
+          24%
+            content: "Cheching."
+          34%
+            content: "Cheching.."
+          44%
+            content: "Cheching..."
+          66%
+            content: "Cheching..."
+          76%
+            content: "Cheching.."
+          86%
+            content: "Cheching"
+          88%
+            content: "Chechin"
+          90%
+            content: "Chechi"
+          92%
+            content: "Chech"
+          94%
+            content: "Chec"
+          96%
+            content: "Che"
+          98%
+            content: "Ch"
+          100%
+            content: "C"
+.login-form
+  width: 350px
+  height: 500px
+  background-color: #373737
+  border-radius: 25px
+  position: absolute
+  top: 0 // to 500px
+  right: 0
+  color: #e1e1e1
+  font-family: "Comic Sans MS", "B Yekan", Tahoma, sans-serif
+  h1
+    margin-top: 50px
+    text-align: center
+    margin-bottom: 50px
+  form
+    padding: 0 50px 50px 50px
+    div
+      display: block
+      margin-bottom: 2rem
+      label
+        display: block
+        padding-bottom: 5px
+      input
+        width: 100%
+        height: 1.5rem
+        border-radius: 10px
+        padding-left: 10px
+        border: 0 solid black
+        color: #e1e1e1
+        background-color: #373737
+        box-shadow: -3px -3px 5px 0 #454545, 3px 3px 5px 0 #2d2d2d
+        font-family: "Comic Sans MS", "B Yekan", Tahoma, sans-serif
+        &:focus
+          outline: none
+          color: #e1e1e1
+          font-family: "Comic Sans MS", "B Yekan", Tahoma, sans-serif
+          box-shadow: -3px -3px 5px 0 #454545, 3px 3px 5px 0 #2d2d2d, -3px -3px 5px 0 #454545 inset, 3px 3px 5px 0 #2d2d2d inset
+    .forget-password
+      text-decoration: none
+      color: #e1e1e1
+      b
+        color: aqua
+    .btn-submit
+      margin-top: 20px
+      background-color: #373737
+      border: none
+      color: #e1e1e1
+      font-family: "Comic Sans MS", "B Yekan", Tahoma, sans-serif
+      border-radius: 15px
+      box-shadow: -3px -3px 5px 0 #454545, 3px 3px 5px 0 #2d2d2d
+      padding: 10px 30px
+      &:hover
+        box-shadow: -1px -1px 2px 0 #454545, 1px 1px 2px 0 #2d2d2d
+      &:active
+        box-shadow: -3px -3px 5px 0 #454545 inset, 3px 3px 5px 0 #2d2d2d inset
